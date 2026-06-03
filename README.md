@@ -2,8 +2,8 @@
 
 Upload a product manual (PDF) and get back a short guide with only the steps that matter. No warranty pages, no parts lists — just how to set it up.
 
-![Upload screen](screenshots/upload.png)
-![Guide output](screenshots/guide.png)
+![Upload screen](Screenshots/upload.png)
+![Guide output](Screenshots/guide.png)
 
 Built this as a fun side project with Claude as my coding assistant. The idea came from being annoyed at how long most product manuals are when all you want to know is how to get started.
 
