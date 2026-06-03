@@ -1,0 +1,6 @@
+.env
+guides.db
+uploads/
+__pycache__/
+*.pyc
+.venv/

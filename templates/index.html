@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual Simplifier</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Toast (replaces red bar) -->
+  <div id="toast" class="toast" hidden></div>
+
+  <div class="page">
+
+    <!-- Upload screen -->
+    <section id="uploadSection" class="screen upload-screen">
+      <h1 class="app-title">Manual Simplifier</h1>
+      <p class="app-sub">Upload any product manual and get a clear, simple guide.</p>
+
+      <div class="upload-zone" id="uploadZone">
+        <span class="upload-icon">📄</span>
+        <p>Drop your PDF here, or <span class="upload-link">browse</span></p>
+        <input type="file" id="fileInput" accept=".pdf" hidden />
+      </div>
+
+      <div id="filePreview" class="file-preview" hidden>
+        <span class="file-name" id="fileName"></span>
+        <span class="file-size" id="fileSize"></span>
+        <button class="clear-btn" id="clearFile">✕</button>
+      </div>
+
+      <button class="primary-btn" id="simplifyBtn" disabled>Simplify Manual</button>
+    </section>
+
+    <!-- Processing screen -->
+    <section id="processingSection" class="screen processing-screen" hidden>
+      <div class="spinner"></div>
+      <p class="processing-label" id="processingStatus">Reading your PDF...</p>
+      <p class="processing-note">This usually takes 30–60 seconds</p>
+    </section>
+
+  </div>
+
+  <!-- Guide modal (outside .page so it overlays everything) -->
+  <div id="guideModal" class="modal-backdrop" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 id="guideTitle" class="guide-title"></h2>
+          <p id="guideSummary" class="guide-summary"></p>
+        </div>
+        <div class="modal-actions">
+          <button class="print-btn" id="printBtn">Print</button>
+          <button class="close-btn" id="closeModal">✕</button>
+        </div>
+      </div>
+      <div id="stepsContainer" class="steps"></div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
